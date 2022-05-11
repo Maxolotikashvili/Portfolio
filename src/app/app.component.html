@@ -1,5 +1,4 @@
 <header>
-
   <a href="#" class="logo">M</a>
 
   <nav>
@@ -24,13 +23,15 @@
     <h1>Hi, My Name Is</h1>
     <h2 class="maxo-h2">Maxo Lotikashvili.</h2>
     <h3 class="developer-h3">I'm a Web Developer.</h3>
-    <p class="text">I'm a Software Developer specializing in Front-End Development. Currently, I'm concentrated on
-      building fast, accessible and responsive applications for web</p>
+    <p class="text">
+      I'm a Software Developer specializing in Front-End Development. Currently,
+      I'm concentrated on building fast, accessible and responsive applications
+      for web
+    </p>
   </div>
 </div>
 
 <div class="contactbox">
-
   <ul class="iconbox">
     <li class="icons">
       <a href="">
@@ -39,7 +40,7 @@
     </li>
 
     <li class="icons">
-      <a href="">
+      <a href="https://linkedin.com/in/maxo-lotikashvili" target="blank">
         <fa-icon [icon]="linkedin" class="icon"></fa-icon>
       </a>
     </li>
@@ -56,21 +57,24 @@
 
 <!-- About Me -->
 
-<div class="bigbox-about">
+<div class="bigbox-about" id="about">
   <div class="smallbox-about">
-
     <div class="aboutbox">
       <h2 class="about-me">About Me</h2>
       <div class="about-line"></div>
     </div>
 
     <div class="about-textbox">
-
-      <p>I enjoy creating and designing applications. After comleting Front-end course, I found myself as a Web
-        developer.</p>
-      <p>I aim for Full-Stack, but currently my goal is to find a community, where I could code regularly and receive
-        lots of information about Web, as I'm trying to fullfil it with the help of Youtube, online literature and
-        coding.</p>
+      <p>
+        I enjoy creating and designing applications. After comleting Front-end
+        course, I found myself as a Web developer.
+      </p>
+      <p>
+        I aim for Full-Stack, but currently my goal is to find a community,
+        where I could code regularly and receive lots of information about Web,
+        as I'm trying to fullfil it with the help of Youtube, online literature
+        and coding.
+      </p>
 
       <p>Here are some of my skills</p>
       <div class="skilllist">
@@ -84,54 +88,199 @@
           <li><span class="shape">▹</span> Typescript</li>
           <li><span class="shape">▹</span> Angular</li>
         </ul>
-        <br>
+        <br />
       </div>
-
     </div>
   </div>
 
   <div class="smallbox-image">
     <div [class]="outline"></div>
-    <img src="assets/imagee.jpg" alt="image" class="myimage" (mouseover)="changeOutline(true)"
-      (mouseleave)="changeOutline(false)">
+    <img
+      src="assets/imagee.jpg"
+      alt="image"
+      class="myimage"
+      (mouseover)="changeOutline(true)"
+      (mouseleave)="changeOutline(false)"
+    />
   </div>
 </div>
 
 <!-- Projects -->
 
-<div class="project-bigbox">
-
+<!-- CyberHub -->
+<div class="bigbox-project" id="projects">
   <div class="workedon-box">
+    <h2 class="workedon">Projects I've Worked On</h2>
     <div class="project-line"></div>
-    <h3 class="worked-on">Projects I've Worked On</h3>
   </div>
-  
-  <div class="project-smallbox">
 
-    <div class="project-imagebox">
-      <img class="project-image" src="assets/imagee.jpg" alt="image">
+  <div class="smallbox-project">
+    <!-- Imagebox -->
+    <div
+      class="project-imagebox"
+      (mouseover)="changeHover(true)"
+      (mouseleave)="changeHover(false)"
+    >
+      <div class="visit-page">
+        <a
+          [class]="projectHover"
+          href="https://maxolotikashvili.github.io/Project-CyberHub/"
+          target="blank"
+          >Visit Page</a
+        >
+      </div>
+      <div class="cyberhub-logo">
+        <span class="letter-c">C</span>yber<span class="hub">Hub</span>
+      </div>
     </div>
 
+    <!-- Textbox -->
     <div class="project-textbox">
       <h6 class="featured">Featured Project</h6>
-      <h4 class="cyberhub">CyberHub</h4>
+      <h2 class="cyberhub">CyberHub</h2>
 
-      <p>PC parts shop: CyberHub E - Commerce type application built with Angular 13, available on Github Pages.</p>
+      <p class="project-description">
+        PC parts shop, CyberHub E - Commerce type application built with Angular
+        13, available on Github Pages.
+      </p>
 
-      <p class="languages">Languages Used</p>
+      <h4 class="used">Languages Used</h4>
       <ol>
+        <br />
         <li>HTML</li>
         <li>SCSS</li>
         <li>Typescript</li>
         <li>Angular</li>
       </ol>
 
-      <p>Tools Used</p>
-      <span>RxJs</span>
+      <h4 class="used">Tools Used</h4>
+      <span class="rxjs">RxJs</span>
 
-      <p>UI Libraries Used</p>
-      <span>Angular Material</span>
+      <h4 class="used">UI Libraries Used</h4>
+      <span class="material">Angular Material</span>
     </div>
-
   </div>
 </div>
+
+<!-- Slider -->
+
+<div class="bigbox-slider">
+  <div class="smallbox-slider">
+    <!-- Textbox -->
+    <div class="textbox-slider">
+      <h2 class="slider">Slider</h2>
+      <p class="slider-description">
+        Animated Slider built with HTML, CSS and Vanilla Javascript, available
+        on Github Pages
+      </p>
+
+      <h4 class="used">Languages Used</h4>
+
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <br />
+      </ul>
+    </div>
+
+    <!-- Imagebox -->
+    <div
+      class="imagebox-slider"
+      (mouseover)="changeSlider(true)"
+      (mouseleave)="changeSlider(false)"
+    >
+      <div class="visit-page">
+        <a [class]="sliderHover" href="https://maxolotikashvili.github.io/Slider/" target="blank">Visit Page</a>
+      </div>
+      <div class="slider-box">
+        <span class="slider-span">Slider</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Waves -->
+
+<div class="bigbox-waves">
+  <div class="smallbox-waves">
+    <!-- Imagebox -->
+    <div
+      class="imagebox-waves"
+      (mouseover)="changeWaves(true)"
+      (mouseleave)="changeWaves(false)"
+    >
+      <div class="visit-page">
+        <a
+          [class]="wavesHover"
+          href="https://maxolotikashvili.github.io/Waves/"
+          target="blank"
+          >Visit Page</a
+        >
+      </div>
+      <img class="image-waves" src="assets/waves.png" alt="image" />
+    </div>
+
+    <!-- Textbox -->
+    <div class="textbox-waves">
+      <h2 class="waves">Waves</h2>
+      <p class="waves-description">
+        Animated Waves built HTML & CSS, available on Github Pages
+      </p>
+
+      <h4 class="used">Languages Used</h4>
+
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- More -->
+
+<h3 class="more">
+  See More Projects On My
+  <a
+    class="more-href"
+    href="https://github.com/Maxolotikashvili/"
+    target="blank"
+    >Github Page</a
+  >
+</h3>
+
+<!-- Contact -->
+
+<div class="touchbox" id="contact">
+  <h2 class="touch">Get In Touch</h2>
+
+  <ul class="ul">
+    <li class="li">
+      <a href="https://github.com/Maxolotikashvili" target="blank">
+        <fa-icon class="icon" [icon]="github"></fa-icon>
+      </a>
+    </li>
+
+    <li class="li">
+      <a href="https://linkedin.com/in/maxo-lotikashvili" target="blank">
+        <fa-icon class="icon" [icon]="linkedinIn"></fa-icon>
+      </a>
+    </li>
+
+    <li class="li">
+      <a href="" target="blank">
+        <fa-icon class="icon" [icon]="gmail"></fa-icon>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+
+<footer>
+  <div class="copyrightbox">
+    <fa-icon class="copyright" [icon]="copyright"></fa-icon>
+    <span>Maxo Lotikashvili</span>
+  </div>
+</footer>
