@@ -1,0 +1,252 @@
+// Fonts
+$fira: "Fira Code", monospace;
+$inter: "Inter", sans-serif;
+
+// Color
+$gasoline: #64ffda;
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px 40px 20px 40px;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $gasoline;
+    font-family: $inter;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    border: 3px solid $gasoline;
+    transition: all 0.2s linear;
+  }
+
+  .logo:hover {
+    background-color: $gasoline;
+    color: white;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 20px;
+      font-family: $fira;
+
+      a {
+        color: #8892b2;
+      }
+    }
+  }
+}
+
+// Bigbox
+
+.bigbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 90%;
+
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+
+    h1 {
+      color: $gasoline;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      font-family: $fira;
+    }
+
+    .maxo-h2 {
+      margin-top: 20px;
+      color: #ccd6f6;
+      font-family: $inter;
+      font-size: 80px;
+    }
+
+    .developer-h3 {
+      margin-top: 10px;
+      color: #8892b2;
+      font-family: $inter;
+      font-size: 60px;
+      letter-spacing: 1px;
+    }
+
+    .text {
+      width: 600px;
+      margin-top: 20px;
+      font-family: $inter;
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: #8892b0;
+    }
+  }
+}
+
+// Contactbox
+
+.contactbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 60px;
+
+  .iconbox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .icons {
+      margin-top: 30px;
+      transition: all 0.2s linear;
+
+      .icon {
+        color: #a8b2d1;
+        font-size: 24px;
+        transition: all 0.25s linear;
+      }
+    }
+
+    .icons:hover {
+      transform: translateY(-3px);
+      .icon {
+        color: $gasoline;
+      }
+    }
+  }
+
+  .line {
+    width: 1px;
+    height: 90px;
+    background-color: #a8b2d1;
+  }
+}
+
+// Section II
+
+.bigbox-about {
+  height: 100%;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+
+  .smallbox-about {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .aboutbox {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .about-me {
+        width: 50%;
+        font-size: 30px;
+        font-family: $inter;
+        font-weight: 600;
+        color: #ccd6f6;
+        letter-spacing: 0.5px;
+        word-wrap: break-word;
+      }
+
+      .about-line {
+        height: 1px;
+        width: 100%;
+        background-color: #8892b2;
+      }
+    }
+
+    .about-textbox {
+      width: 100%;
+      letter-spacing: 1px;
+      margin-top: 40px;
+
+      p {
+        font-size: 18px;
+        color: #8892b0;
+        font-family: $inter;
+        font-weight: 600;
+        margin-bottom: 30px;
+        line-height: 24px;
+        word-wrap: break-word;
+      }
+
+      .skilllist {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          display: flex;
+          align-items: center;
+          line-height: 32px;
+          font-family: $inter;
+          font-weight: 800;
+          color: #8892b0;
+
+          .shape {
+            color: $gasoline;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .smallbox-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin-left: 100px;
+
+    .outline {
+      position: relative;
+      transform: translate(8%, 8%);
+      width: 300px;
+      height: 300px;
+      border: 2px solid white;
+      transition: all 0.25s linear;
+      border-radius: 3px;
+    }
+
+    .outline-active {
+      position: relative;
+      transform: translate(5%, 5%);
+      width: 300px;
+      height: 300px;
+      border: 2px solid white;
+      transition: all 0.25s linear;
+      border-radius: 3px;
+    }
+
+    .myimage {
+      position: absolute;
+      max-width: 300px;
+      width: 100%;
+      max-height: 300px;
+      height: 100%;
+      border-radius: 3px;
+      filter: grayscale(0.5);
+      transition: all 0.25s linear;
+    }
+
+    .myimage:hover {
+      filter: grayscale(0);
+    }
+  }
+}
