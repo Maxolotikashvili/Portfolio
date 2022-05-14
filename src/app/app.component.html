@@ -1,21 +1,28 @@
 <header>
   <a href="#" class="logo">M</a>
+  <div [class]="navigationBox">
+    <nav class="navigation">
+      <ul>
+        <li>
+          <a class="navlink" href="#about">About</a>
+        </li>
 
-  <nav>
-    <ul>
-      <li>
-        <a href="#about">About</a>
-      </li>
+        <li>
+          <a class="navlink" href="#projects">Projects</a>
+        </li>
 
-      <li>
-        <a href="#projects">Projects</a>
-      </li>
+        <li>
+          <a class="navlink" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
+    <div [class]="navbar" (click)="animateNavbar()" (click)="enableNavigation()">
+      <div class="childbar1"></div>
+      <div class="childbar2"></div>
+      <div class="childbar3"></div>
+    </div>
+  </div>
 </header>
 
 <div class="bigbox">
@@ -31,7 +38,10 @@
   </div>
 </div>
 
-<div class="contactbox">
+<div [class]="contactBox">
+  <fa-icon class="arrowdown" [icon]="arrowDown" (click)="enableContactBox()"></fa-icon>
+  <fa-icon class="arrowup" [icon]="arrowUp" (click)="enableContactBox()"></fa-icon>
+
   <ul class="iconbox">
     <li class="icons">
       <a href="">
@@ -95,13 +105,8 @@
 
   <div class="smallbox-image">
     <div [class]="outline"></div>
-    <img
-      src="assets/imagee.jpg"
-      alt="image"
-      class="myimage"
-      (mouseover)="changeOutline(true)"
-      (mouseleave)="changeOutline(false)"
-    />
+    <img src="assets/imagee.jpg" alt="image" class="myimage" (mouseover)="changeOutline(true)"
+      (mouseleave)="changeOutline(false)" />
   </div>
 </div>
 
@@ -116,18 +121,10 @@
 
   <div class="smallbox-project">
     <!-- Imagebox -->
-    <div
-      class="project-imagebox"
-      (mouseover)="changeHover(true)"
-      (mouseleave)="changeHover(false)"
-    >
+    <div class="project-imagebox" (mouseover)="changeHover(true)" (mouseleave)="changeHover(false)">
       <div class="visit-page">
-        <a
-          [class]="projectHover"
-          href="https://maxolotikashvili.github.io/Project-CyberHub/"
-          target="blank"
-          >Visit Page</a
-        >
+        <a [class]="projectHover" href="https://maxolotikashvili.github.io/Project-CyberHub/" target="blank">Visit
+          Page</a>
       </div>
       <div class="cyberhub-logo">
         <span class="letter-c">C</span>yber<span class="hub">Hub</span>
@@ -185,15 +182,11 @@
     </div>
 
     <!-- Imagebox -->
-    <div
-      class="imagebox-slider"
-      (mouseover)="changeSlider(true)"
-      (mouseleave)="changeSlider(false)"
-    >
+    <div class="imagebox-slider" (mouseover)="changeSlider(true)" (mouseleave)="changeSlider(false)">
       <div class="visit-page">
         <a [class]="sliderHover" href="https://maxolotikashvili.github.io/Slider/" target="blank">Visit Page</a>
       </div>
-        <img src="assets/slider.png" class="slider-image">
+      <img src="assets/slider.png" class="slider-image">
     </div>
   </div>
 </div>
@@ -203,18 +196,9 @@
 <div class="bigbox-waves">
   <div class="smallbox-waves">
     <!-- Imagebox -->
-    <div
-      class="imagebox-waves"
-      (mouseover)="changeWaves(true)"
-      (mouseleave)="changeWaves(false)"
-    >
+    <div class="imagebox-waves" (mouseover)="changeWaves(true)" (mouseleave)="changeWaves(false)">
       <div class="visit-page">
-        <a
-          [class]="wavesHover"
-          href="https://maxolotikashvili.github.io/Waves/"
-          target="blank"
-          >Visit Page</a
-        >
+        <a [class]="wavesHover" href="https://maxolotikashvili.github.io/Waves/" target="blank">Visit Page</a>
       </div>
       <img class="image-waves" src="assets/waves.jpg" alt="image" />
     </div>
@@ -240,12 +224,7 @@
 
 <h3 class="more">
   See More Projects On My
-  <a
-    class="more-href"
-    href="https://github.com/Maxolotikashvili/"
-    target="blank"
-    >Github Page</a
-  >
+  <a class="more-href" href="https://github.com/Maxolotikashvili/" target="blank">Github Page</a>
 </h3>
 
 <!-- Contact -->
@@ -267,11 +246,12 @@
     </li>
 
     <li class="li">
-      <a href="" target="blank">
+      <a href="#gmail" (click)="showGmail()">
         <fa-icon class="icon" [icon]="gmail"></fa-icon>
       </a>
     </li>
   </ul>
+  <span id="gmail" [class]="gmailSpan">Maxolotikashvili401@gmail.com</span>
 </div>
 
 <!-- Footer -->

@@ -5,11 +5,10 @@ $inter: "Inter", sans-serif;
 // Color
 $gasoline: #64ffda;
 
-
 // Header
 header {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
 
@@ -31,23 +30,112 @@ header {
     color: white;
   }
 
-  ul {
+  .navigation-box,
+  .navigation-box-active {
     display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-top: 12px;
+    transition: all 0.2s linear;
 
-    li {
-      margin-right: 20px;
-      font-family: $fira;
-      font-weight: 800;
+    ul {
+      display: flex;
 
-      a {
-        color: #8892b2;
-        transition: all 0.15s linear;
-        padding: 4px;
+      li {
+        margin-right: 20px;
+        font-family: $fira;
+        font-weight: 800;
+
+        a {
+          color: #8892b2;
+          transition: all 0.15s linear;
+          padding: 4px;
+        }
+
+        a:hover {
+          color: $gasoline;
+        }
       }
+    }
+  }
 
-      a:hover {
-        color: $gasoline;
-      }
+  .navbar {
+    display: none;
+    position: relative;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+
+    .childbar1 {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 4px;
+      background-color: white;
+      transition: all 0.25s linear;
+    }
+
+    .childbar2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 4px;
+      background-color: white;
+      opacity: 1;
+      transition: all 0.25s linear;
+    }
+
+    .childbar3 {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 4px;
+      background-color: white;
+      transition: all 0.25s linear;
+    }
+  }
+
+  // Responsive Nav Bar
+  .navbaractive {
+    display: none;
+    position: relative;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+
+    .childbar1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 4px;
+      background-color: white;
+      transform: rotate(45deg);
+      transition: all 0.25s linear;
+    }
+
+    .childbar2 {
+      opacity: 0;
+      transition: all 0.25s linear;
+    }
+
+    .childbar3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 4px;
+      background-color: white;
+      transform: rotate(-45deg);
+      transition: all 0.25s linear;
     }
   }
 }
@@ -59,12 +147,12 @@ header {
   justify-content: center;
   align-items: center;
   height: 80%;
-  width: 90%;
 
   .textbox {
     display: flex;
     flex-direction: column;
-    align-items: initial;
+    align-items: baseline;
+    padding-left: 20px;
 
     h1 {
       color: $gasoline;
@@ -89,7 +177,8 @@ header {
     }
 
     .text {
-      width: 600px;
+      max-width: 600px;
+      width: 100%;
       margin-top: 20px;
       font-family: $inter;
       font-size: 16px;
@@ -101,13 +190,23 @@ header {
 
 // Contactbox
 
-.contactbox {
+.contactbox,
+.responsive-contactbox {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
   bottom: 0;
   left: 60px;
+  z-index: 3;
+
+  .arrowdown {
+    font-size: 0px;
+  }
+
+  .arrowup {
+    font-size: 0px;
+  }
 
   .iconbox {
     display: flex;
@@ -144,26 +243,27 @@ header {
 
 .bigbox-about {
   height: 100%;
-  width: 60%;
+  width: 65%;
   margin: auto;
   display: flex;
   justify-content: space-around;
 
   .smallbox-about {
-    width: 70%;
-    height: 100%;
+    width: 45%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     .aboutbox {
-      width: 110%;
+      width: 90%;
       display: flex;
       align-items: center;
 
       .about-me {
         max-width: 170px;
         width: 100%;
+        margin-right: 20px;
         font-size: 30px;
         font-family: $inter;
         font-weight: 600;
@@ -220,9 +320,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
     height: 100%;
-    margin-left: 100px;
 
     .outline {
       position: relative;
@@ -280,6 +379,7 @@ header {
     .workedon {
       max-width: 350px;
       width: 100%;
+      margin-right: 15px;
       font-size: 26px;
       font-family: $inter;
       font-weight: 600;
@@ -544,9 +644,9 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%; 
+        width: 100%;
         height: 300px;
-        object-fit: cover;
+        object-fit: fill;
         border-radius: 5px;
       }
     }
@@ -688,6 +788,7 @@ header {
   height: 100%;
 
   .touch {
+    text-align: center;
     font-size: 60px;
     color: #a8b2d1;
     letter-spacing: 0.5px;
@@ -759,9 +860,24 @@ header {
   ul li:nth-child(3) a:before {
     background: orangered;
   }
+
+  .gmail {
+    font-size: 0px;
+    transition: all 0.25s linear;
+  }
+
+  .show-gmail{
+    margin-top: 40px;
+    font-size: 24px;
+    font-family: $inter;
+    font-weight: 800;
+    text-align: center;
+    color: #8892b0;
+    transition: all 0.25s linear;
+  }
 }
 
-// Footer 
+// Footer
 
 .copyrightbox {
   display: flex;
@@ -773,5 +889,370 @@ header {
 
   .copyright {
     margin-right: 10px;
+  }
+}
+
+// Responsive
+
+@media (max-width: 1320px) {
+  // Projects Intro
+  .workedon-box {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 1350px) {
+  // About Me
+  .bigbox-about {
+    width: 75% !important;
+  }
+}
+
+@media (max-width: 1132px) {
+  // Projects Intro
+  .workedon-box {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 1061px) {
+  // About Me
+  .bigbox-about {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  // Project CyberHub
+  .bigbox-project {
+    margin-top: 100px;
+
+    .workedon-box {
+      width: 100% !important;
+    }
+
+    .smallbox-project {
+      flex-direction: column;
+      align-items: center;
+
+      .project-textbox {
+        width: 100% !important;
+        justify-content: flex-end;
+        padding: 20px;
+      }
+
+      .project-imagebox {
+        width: 100% !important;
+
+        .cyberhub-logo {
+          height: 300px !important;
+        }
+      }
+    }
+  }
+
+  // Contactbox
+  .contactbox {
+    z-index: 3;
+
+    .arrowup {
+      font-size: 26px;
+      color: white;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.25s linear;
+      cursor: pointer;
+    }
+
+    .icon {
+      font-size: 0px !important;
+    }
+
+    .line {
+      width: 0px;
+      height: 0px;
+    }
+  }
+
+  .responsive-contactbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 60px;
+
+    .arrowdown {
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .arrowup {
+      font-size: 0px;
+    }
+
+    .iconbox {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      .icons {
+        margin-top: 30px;
+        transition: all 0.2s linear;
+
+        .icon {
+          color: #a8b2d1;
+          font-size: 24px;
+          transition: all 0.25s linear;
+        }
+      }
+
+      .icons:hover {
+        transform: translateY(-3px);
+        .icon {
+          color: $gasoline;
+        }
+      }
+    }
+
+    .line {
+      width: 1px;
+      height: 90px;
+      background-color: #a8b2d1;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  // About Me
+  .bigbox-about {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 200px;
+
+    .smallbox-about {
+      width: 90% !important;
+    }
+
+    .smallbox-image {
+      width: 100%;
+    }
+  }
+
+  .bigbox-project {
+    margin-top: 200px !important;
+  }
+
+  // Project Slider
+  .smallbox-slider {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .textbox-slider {
+      width: 90% !important;
+      margin: 0 !important;
+      margin-bottom: 50px !important;
+    }
+
+    .imagebox-slider {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    padding-right: 0 !important;
+
+    // Header Navigaion
+    .navigation-box {
+      a {
+        font-size: 0px;
+      }
+
+      .navbar {
+        display: block !important;
+      }
+    }
+
+    .navigation-box-active {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      transition: all 0.2s linear;
+
+      ul {
+        flex-direction: column;
+        text-align: end;
+        margin-top: 100px;
+
+        li {
+          font-size: 20px;
+          margin-bottom: 20px;
+
+          a {
+            font-family: $inter;
+            font-size: 22px;
+            color: #8892b2;
+            padding: 4px;
+            transition: all 0.15s linear;
+          }
+
+          a:hover {
+            color: $gasoline;
+          }
+        }
+      }
+
+      .navbaractive {
+        display: block !important;
+      }
+    }
+  }
+
+  // CyberHub
+  .bigbox-project {
+    width: 90% !important;
+    margin-top: 400px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  // Waves
+  .bigbox-waves {
+    width: 90% !important;
+
+    .smallbox-waves {
+      flex-direction: column;
+      align-items: flex-end;
+
+      .textbox-waves {
+        width: 90% !important;
+      }
+
+      .imagebox-waves {
+        width: 90% !important;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  // About Me
+  .smallbox-about {
+    width: 100% !important;
+
+    .skilllist {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  // Intro
+  .maxo-h2 {
+    font-size: 60px !important;
+  }
+
+  .developer-h3 {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .show-gmail {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 410px) {
+  // Intro
+  .bigbox {
+    .maxo-h2 {
+      font-size: 40px !important;
+    }
+
+    .developer-h3 {
+      font-size: 20px !important;
+    }
+
+    .text {
+      font-size: 14px !important;
+    }
+  }
+
+  // About Me Image
+  .outline {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  .outline-active {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  .myimage {
+    max-width: 250px !important;
+    width: 100%;
+    max-height: 250px !important;
+    height: 100%;
+  }
+}
+
+@media (max-width: 370px) {
+  // Project CyberHub
+  .bigbox-project {
+    .cyberhub-logo {
+      font-size: 34px !important;
+      letter-spacing: 4px !important;
+    }
+
+    .project-textbox {
+      .used {
+        margin-bottom: 10px !important;
+      }
+
+      ol {
+        flex-direction: column;
+        align-items: flex-end !important;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .show-gmail {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 330px) {
+  // About Me Image
+  .outline {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .outline-active {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .myimage {
+    max-width: 220px !important;
+    width: 100%;
+    max-height: 220px !important;
+    height: 100%;
   }
 }

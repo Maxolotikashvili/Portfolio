@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
+import { AnyForUntypedForms } from '@angular/forms';
+import { FontawesomeObject } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faCopyright, faEnvelope, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowUp, faC, faCopyright, faEnvelope, faLinesLeaning, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -12,21 +14,61 @@ export class AppComponent implements OnInit {
   title = 'portfolio';
 
   // Fontawesome
-  github = faGithub;
-  gmail = faEnvelope;
-  linkedin = faLinkedin;
-  linkedinIn = faLinkedinIn;
-  copyright = faCopyright;
+  github: any = faGithub;
+  gmail: any = faEnvelope;
+  linkedin: any = faLinkedin;
+  linkedinIn: any = faLinkedinIn;
+  copyright: any = faCopyright;
+  arrowUp: any = faArrowUp;
+  arrowDown: any = faArrowDown;
+
+  // NavBar
+  navbar: string = "navbar";
+  navigationBox: string = "navigation-box";
+  navMode: boolean = false;
+  contactMode: boolean = false;
+  gmailMode: boolean = false;
+
+  // Contact
+  contactBox: string = "contactbox";
+  // Gmail
+  gmailSpan: string = "gmail";
 
   // Effects
   outline: string = "outline";
   projectHover: string = "project-hover";
   sliderHover: string = "slider-hover";
-  wavesHover: string  = "waves-hover"
+  wavesHover: string = "waves-hover";
 
   ngOnInit(): void {
 
   }
+
+  // Navigation Enable
+  enableNavigation() {
+    this.navMode = !this.navMode;
+    if (this.navMode === true) {
+      this.navigationBox = "navigation-box-active";
+    } else {
+      this.navigationBox = "navigation-box";
+    };
+  };
+
+  // Enable Contactbox
+  enableContactBox() {
+    this.contactMode = !this.contactMode;
+    if (this.contactMode === true) {
+      this.contactBox = "responsive-contactbox";
+    } else { this.contactBox = "contactbox" };
+  };
+
+  // Navigation Animation
+  animateNavbar() {
+    if (this.navbar === "navbar") {
+      this.navbar = "navbaractive";
+
+    } else { this.navbar = "navbar" };
+  };
 
   // Hover Effect For Photo
   changeOutline(mode: boolean) {
@@ -54,5 +96,14 @@ export class AppComponent implements OnInit {
     if (mode === true) {
       this.wavesHover = "waves-hover-active";
     } else { this.wavesHover = "waves-hover" };
+  };
+
+  showGmail() {
+    this.gmailMode = !this.gmailMode;
+    if (this.gmailMode === true) {
+      this.gmailSpan = "show-gmail";
+    } else {
+      this.gmailSpan = "gmail";
+    };
   };
 }
