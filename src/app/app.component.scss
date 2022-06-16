@@ -5,7 +5,6 @@ $inter: "Inter", sans-serif;
 // Color
 $gasoline: #64ffda;
 
-
 // Header
 header {
   display: flex;
@@ -456,6 +455,7 @@ header {
         font-weight: 800;
         letter-spacing: 8px;
         background-color: #005fa8;
+        transition: all 0.2s linear;
 
         .letter-c {
           color: rgb(27, 0, 179);
@@ -866,7 +866,7 @@ header {
     transition: all 0.25s linear;
   }
 
-  .show-gmail{
+  .show-gmail {
     margin-top: 40px;
     font-size: 24px;
     font-family: $inter;
@@ -926,7 +926,8 @@ header {
 @media (max-width: 1000px) {
   // Project CyberHub
   .bigbox-project {
-    height: 120% !important;
+    height: 150%;
+    margin-top: 50px;
 
     .workedon-box {
       width: 100% !important;
@@ -1028,12 +1029,11 @@ header {
 }
 
 @media (max-width: 970px) {
-
   // About Me
   .bigbox-about {
     flex-direction: column;
     width: 90%;
-    height: 120%;
+    height: 150%;
 
     .smallbox-about {
       width: 90% !important;
@@ -1045,32 +1045,35 @@ header {
   }
 
   .bigbox-project {
-    height: 150%;
     margin-top: 100px;
   }
 
-  // Project Slider
-  .smallbox-slider {
-    flex-direction: column;
-    align-items: flex-start;
+  .bigbox-slider {
+    margin-top: 50px;
 
-    .textbox-slider {
-      width: 90% !important;
-      margin: 0 !important;
-      margin-bottom: 50px !important;
-    }
+    // Project Slider
+    .smallbox-slider {
+      flex-direction: column;
+      align-items: flex-start;
 
-    .imagebox-slider {
-      width: 100% !important;
+      .textbox-slider {
+        width: 90% !important;
+        margin: 0 !important;
+        margin-bottom: 50px !important;
+      }
+
+      .imagebox-slider {
+        width: 100% !important;
+      }
     }
+  }
+
+  .bigbox-waves {
+    margin-top: 100px;
   }
 }
 
 @media (max-width: 870px) {
-  .bigbox-about {
-    margin-bottom: 150px;
-  }
-
   .smallbox-image {
     margin-top: 30px;
   }
@@ -1131,15 +1134,16 @@ header {
   // CyberHub
   .bigbox-about {
     width: 90% !important;
+    margin: 100px 0px 200px 0px;
+    padding-left: 5px;
   }
 }
 
 @media (max-width: 600px) {
-
   // Waves
   .bigbox-waves {
     width: 90% !important;
-    height: 120%;
+    height: 150%;
 
     .smallbox-waves {
       flex-direction: column;
@@ -1158,9 +1162,8 @@ header {
 }
 
 @media (max-width: 580px) {
-  // About Me
   .bigbox-about {
-    height: 140%;
+    height: 170%;
   }
 
   .smallbox-about {
@@ -1184,21 +1187,22 @@ header {
 }
 
 @media (max-width: 480px) {
-  .bigbox-project {
-    margin-top: 300px;
-  }
-
   // My Image
-  .myimage, .outline, .outline-active {
+  .myimage,
+  .outline,
+  .outline-active {
     width: 310px !important;
     height: 360px !important;
   }
 }
 
 @media (max-width: 430px) {
-  // Slider
-  .bigbox-slider {
-    height: 150%;
+  .bigbox-project {
+    height: 180%;
+  }
+
+  .cyberhub-logo {
+    font-size: 32px !important;
   }
 
   .show-gmail {
@@ -1223,7 +1227,9 @@ header {
   }
 
   // My Image
-  .myimage, .outline, .outline-active {
+  .myimage,
+  .outline,
+  .outline-active {
     width: 270px !important;
     height: 360px !important;
   }
@@ -1232,6 +1238,8 @@ header {
 @media (max-width: 370px) {
   // Project CyberHub
   .bigbox-project {
+    height: 220%;
+
     .cyberhub-logo {
       font-size: 34px !important;
       letter-spacing: 4px !important;
@@ -1252,18 +1260,22 @@ header {
       }
     }
   }
-
- 
 }
 
 @media (max-width: 350px) {
-  // My Image
-  .myimage, .outline, .outline-active {
-    width: 250px !important;
+  .bigbox-project {
+
+    .cyberhub-logo {
+      font-size: 30px !important;
+      letter-spacing: 2px !important;
+    }
   }
 
-  .bigbox-project {
-    margin-top: 400px;
+  // My Image
+  .myimage,
+  .outline,
+  .outline-active {
+    width: 250px !important;
   }
 
   .show-gmail {
