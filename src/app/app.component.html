@@ -38,25 +38,26 @@
   </div>
 </div>
 
+<!-- Contact ( Position ) -->
 <div [class]="contactBox">
   <fa-icon class="arrowdown" [icon]="arrowDown" (click)="enableContactBox()"></fa-icon>
   <fa-icon class="arrowup" [icon]="arrowUp" (click)="enableContactBox()"></fa-icon>
 
   <ul class="iconbox">
     <li class="icons">
-      <a href="">
+      <a href="https://github.com/Maxolotikashvili" target="_blank">
         <fa-icon [icon]="github" class="icon"></fa-icon>
       </a>
     </li>
 
     <li class="icons">
-      <a href="https://linkedin.com/in/maxo-lotikashvili" target="blank">
+      <a href="https://linkedin.com/in/maxo-lotikashvili" target="_blank">
         <fa-icon [icon]="linkedin" class="icon"></fa-icon>
       </a>
     </li>
 
     <li class="icons">
-      <a href="">
+      <a href="#gmail" (click)="showGmail()">
         <fa-icon [icon]="gmail" class="icon"></fa-icon>
       </a>
     </li>
@@ -80,7 +81,7 @@
         course, I found myself as a Web developer.
       </p>
       <p>
-        I aim for Full-Stack, but currently my goal is to find a community,
+        Currently my goal is to find a community,
         where I could code regularly and receive lots of information about Web,
         as I'm trying to fullfil it with the help of Youtube, online literature
         and coding.
@@ -89,14 +90,15 @@
       <p>Here are some of my skills</p>
       <div class="skilllist">
         <ul>
-          <li><span class="shape">▹</span> HTML</li>
-          <li><span class="shape">▹</span> CSS</li>
-          <li><span class="shape">▹</span> SASS & SCSS</li>
+          <li><span class="shape">▹</span>HTML</li>
+          <li><span class="shape">▹</span>CSS</li>
+          <li><span class="shape">▹</span>SASS & SCSS</li>
         </ul>
         <ul>
-          <li><span class="shape">▹</span> Javascript ( ES6 + )</li>
-          <li><span class="shape">▹</span> Typescript</li>
-          <li><span class="shape">▹</span> Angular</li>
+          <li><span class="shape">▹</span>Javascript ( ES6 + )</li>
+          <li><span class="shape">▹</span>Typescript</li>
+          <li><span class="shape">▹</span>Angular</li>
+          <li><span class="shape">▹</span>React</li>
         </ul>
         <br />
       </div>
@@ -105,7 +107,7 @@
 
   <div class="smallbox-image">
     <div [class]="outline"></div>
-    <img src="assets/imagee.jpg" alt="image" class="myimage" (mouseover)="changeOutline(true)"
+    <img src="assets/Photo.png" alt="image" class="myimage" (mouseover)="changeOutline(true)"
       (mouseleave)="changeOutline(false)" />
   </div>
 </div>
@@ -123,7 +125,7 @@
     <!-- Imagebox -->
     <div class="project-imagebox" (mouseover)="changeHover(true)" (mouseleave)="changeHover(false)">
       <div class="visit-page">
-        <a [class]="projectHover" href="https://maxolotikashvili.github.io/Project-CyberHub/" target="blank">Visit
+        <a [class]="projectHover" href="https://maxolotikashvili.github.io/Project-CyberHub/" target="_blank">Visit
           Page</a>
       </div>
       <div class="cyberhub-logo">
@@ -184,7 +186,7 @@
     <!-- Imagebox -->
     <div class="imagebox-slider" (mouseover)="changeSlider(true)" (mouseleave)="changeSlider(false)">
       <div class="visit-page">
-        <a [class]="sliderHover" href="https://maxolotikashvili.github.io/Slider/" target="blank">Visit Page</a>
+        <a [class]="sliderHover" href="https://maxolotikashvili.github.io/Slider/" target="_blank">Visit Page</a>
       </div>
       <img src="assets/slider.png" class="slider-image">
     </div>
@@ -198,9 +200,9 @@
     <!-- Imagebox -->
     <div class="imagebox-waves" (mouseover)="changeWaves(true)" (mouseleave)="changeWaves(false)">
       <div class="visit-page">
-        <a [class]="wavesHover" href="https://maxolotikashvili.github.io/Waves/" target="blank">Visit Page</a>
+        <a [class]="wavesHover" href="https://maxolotikashvili.github.io/Waves/" target="_blank">Visit Page</a>
       </div>
-      <img class="image-waves" src="assets/waves.jpg" alt="image" />
+      <img class="image-waves" src="assets/waves.png" alt="image" />
     </div>
 
     <!-- Textbox -->
@@ -224,7 +226,7 @@
 
 <h3 class="more">
   See More Projects On My
-  <a class="more-href" href="https://github.com/Maxolotikashvili/" target="blank">Github Page</a>
+  <a class="more-href" href="https://github.com/Maxolotikashvili/" target="_blank">Github Page</a>
 </h3>
 
 <!-- Contact -->
@@ -234,13 +236,13 @@
 
   <ul class="ul">
     <li class="li">
-      <a href="https://github.com/Maxolotikashvili" target="blank">
+      <a href="https://github.com/Maxolotikashvili" target="_blank">
         <fa-icon class="icon" [icon]="github"></fa-icon>
       </a>
     </li>
 
     <li class="li">
-      <a href="https://linkedin.com/in/maxo-lotikashvili" target="blank">
+      <a href="https://linkedin.com/in/maxo-lotikashvili" target="_blank">
         <fa-icon class="icon" [icon]="linkedinIn"></fa-icon>
       </a>
     </li>

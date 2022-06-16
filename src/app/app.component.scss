@@ -5,6 +5,7 @@ $inter: "Inter", sans-serif;
 // Color
 $gasoline: #64ffda;
 
+
 // Header
 header {
   display: flex;
@@ -20,7 +21,7 @@ header {
     font-family: $inter;
     width: 45px;
     height: 45px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 3px solid $gasoline;
     transition: all 0.2s linear;
   }
@@ -140,13 +141,13 @@ header {
   }
 }
 
-// Bigbox
+// Bigbox ( First Page )
 
 .bigbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 100%;
 
   .textbox {
     display: flex;
@@ -188,7 +189,7 @@ header {
   }
 }
 
-// Contactbox
+// Contactbox ( Position )
 
 .contactbox,
 .responsive-contactbox {
@@ -250,7 +251,6 @@ header {
 
   .smallbox-about {
     width: 45%;
-    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -308,6 +308,7 @@ header {
           color: #8892b0;
 
           .shape {
+            font-size: 20px;
             color: $gasoline;
             margin-right: 5px;
           }
@@ -321,13 +322,12 @@ header {
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 100%;
 
     .outline {
       position: relative;
       transform: translate(8%, 8%);
-      width: 300px;
-      height: 300px;
+      width: 370px;
+      height: 370px;
       border: 2px solid white;
       transition: all 0.25s linear;
       border-radius: 3px;
@@ -336,21 +336,20 @@ header {
     .outline-active {
       position: relative;
       transform: translate(5%, 5%);
-      width: 300px;
-      height: 300px;
+      width: 370px;
+      height: 370px;
       border: 2px solid white;
       transition: all 0.25s linear;
       border-radius: 3px;
     }
 
     .myimage {
+      object-fit: none;
       position: absolute;
-      max-width: 300px;
-      width: 100%;
-      max-height: 300px;
-      height: 100%;
+      width: 370px;
+      height: 370px;
       border-radius: 3px;
-      filter: grayscale(0.5);
+      filter: grayscale(0.25);
       transition: all 0.25s linear;
     }
 
@@ -367,8 +366,8 @@ header {
   flex-direction: column;
   justify-content: center;
   width: 80%;
-  height: 100%;
   margin: auto;
+  height: 100%;
 
   .workedon-box {
     display: flex;
@@ -399,6 +398,7 @@ header {
   .smallbox-project {
     display: flex;
     width: 100%;
+    padding: 10px;
 
     // Imagebox
     .project-imagebox {
@@ -883,6 +883,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
   font-size: 15px;
   color: #8892b2;
   font-family: $fira;
@@ -925,7 +926,7 @@ header {
 @media (max-width: 1000px) {
   // Project CyberHub
   .bigbox-project {
-    margin-top: 100px;
+    height: 120% !important;
 
     .workedon-box {
       width: 100% !important;
@@ -959,8 +960,8 @@ header {
       font-size: 26px;
       color: white;
       position: absolute;
-      bottom: 10%;
-      left: 50%;
+      bottom: 10px;
+      left: 7px;
       transform: translate(-50%, -50%);
       transition: all 0.25s linear;
       cursor: pointer;
@@ -981,8 +982,8 @@ header {
     flex-direction: column;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 60px;
+    bottom: 0px;
+    left: 55px;
 
     .arrowdown {
       font-size: 26px;
@@ -1027,11 +1028,12 @@ header {
 }
 
 @media (max-width: 970px) {
+
   // About Me
   .bigbox-about {
     flex-direction: column;
     width: 90%;
-    margin-top: 200px;
+    height: 120%;
 
     .smallbox-about {
       width: 90% !important;
@@ -1043,7 +1045,8 @@ header {
   }
 
   .bigbox-project {
-    margin-top: 200px !important;
+    height: 150%;
+    margin-top: 100px;
   }
 
   // Project Slider
@@ -1060,6 +1063,16 @@ header {
     .imagebox-slider {
       width: 100% !important;
     }
+  }
+}
+
+@media (max-width: 870px) {
+  .bigbox-about {
+    margin-bottom: 150px;
+  }
+
+  .smallbox-image {
+    margin-top: 30px;
   }
 }
 
@@ -1116,16 +1129,17 @@ header {
   }
 
   // CyberHub
-  .bigbox-project {
+  .bigbox-about {
     width: 90% !important;
-    margin-top: 400px !important;
   }
 }
 
 @media (max-width: 600px) {
+
   // Waves
   .bigbox-waves {
     width: 90% !important;
+    height: 120%;
 
     .smallbox-waves {
       flex-direction: column;
@@ -1145,6 +1159,10 @@ header {
 
 @media (max-width: 580px) {
   // About Me
+  .bigbox-about {
+    height: 140%;
+  }
+
   .smallbox-about {
     width: 100% !important;
 
@@ -1165,13 +1183,30 @@ header {
   }
 }
 
+@media (max-width: 480px) {
+  .bigbox-project {
+    margin-top: 300px;
+  }
+
+  // My Image
+  .myimage, .outline, .outline-active {
+    width: 310px !important;
+    height: 360px !important;
+  }
+}
+
 @media (max-width: 430px) {
+  // Slider
+  .bigbox-slider {
+    height: 150%;
+  }
+
   .show-gmail {
     font-size: 20px !important;
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 400px) {
   // Intro
   .bigbox {
     .maxo-h2 {
@@ -1187,22 +1222,10 @@ header {
     }
   }
 
-  // About Me Image
-  .outline {
-    width: 250px !important;
-    height: 250px !important;
-  }
-
-  .outline-active {
-    width: 250px !important;
-    height: 250px !important;
-  }
-
-  .myimage {
-    max-width: 250px !important;
-    width: 100%;
-    max-height: 250px !important;
-    height: 100%;
+  // My Image
+  .myimage, .outline, .outline-active {
+    width: 270px !important;
+    height: 360px !important;
   }
 }
 
@@ -1229,30 +1252,21 @@ header {
       }
     }
   }
+
+ 
 }
 
 @media (max-width: 350px) {
+  // My Image
+  .myimage, .outline, .outline-active {
+    width: 250px !important;
+  }
+
+  .bigbox-project {
+    margin-top: 400px;
+  }
+
   .show-gmail {
     font-size: 17px !important;
-  }
-}
-
-@media (max-width: 330px) {
-  // About Me Image
-  .outline {
-    width: 220px !important;
-    height: 220px !important;
-  }
-
-  .outline-active {
-    width: 220px !important;
-    height: 220px !important;
-  }
-
-  .myimage {
-    max-width: 220px !important;
-    width: 100%;
-    max-height: 220px !important;
-    height: 100%;
   }
 }
