@@ -653,9 +653,9 @@ header {
   }
 }
 
-// Waves
+// Snake
 
-.bigbox-waves {
+.bigbox-snake {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -663,12 +663,12 @@ header {
   height: 100%;
   margin: auto;
 
-  .smallbox-waves {
+  .smallbox-snake {
     display: flex;
     width: 100%;
 
     // Imagebox
-    .imagebox-waves {
+    .imagebox-snake {
       position: relative;
       width: 60%;
 
@@ -677,7 +677,7 @@ header {
         width: 100%;
         height: 100%;
 
-        .waves-hover {
+        .snake-hover {
           font-size: 0px;
           display: flex;
           justify-content: center;
@@ -692,7 +692,7 @@ header {
           transition: all 0.15s linear;
         }
 
-        .waves-hover-active {
+        .snake-hover-active {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -709,7 +709,7 @@ header {
         }
       }
 
-      .image-waves {
+      .image-snake {
         height: 400px;
         width: 100%;
         border-radius: 5px;
@@ -717,11 +717,11 @@ header {
     }
 
     // Textbox
-    .textbox-waves {
+    .textbox-snake {
       width: 40%;
       margin-left: 20px;
 
-      .waves {
+      .snake {
         color: #ccd6f6;
         font-size: 28px;
         font-family: $inter;
@@ -730,7 +730,7 @@ header {
         margin-bottom: 20px;
       }
 
-      .waves-description {
+      .snake-description {
         padding: 20px 5px 20px 10px;
         background-color: #112240;
         color: #a8b2d1;
@@ -739,7 +739,7 @@ header {
         transition: all 0.25s linear;
       }
 
-      .waves-description:hover {
+      .snake-description:hover {
         box-shadow: 1px 1px 5px black;
       }
 
@@ -1068,7 +1068,7 @@ header {
     }
   }
 
-  .bigbox-waves {
+  .bigbox-snake {
     margin-top: 100px;
   }
 }
@@ -1140,20 +1140,20 @@ header {
 }
 
 @media (max-width: 600px) {
-  // Waves
-  .bigbox-waves {
+  // Snake
+  .bigbox-snake {
     width: 90% !important;
     height: 150%;
 
-    .smallbox-waves {
+    .smallbox-snake {
       flex-direction: column;
       align-items: flex-end;
 
-      .textbox-waves {
+      .textbox-snake {
         width: 90% !important;
       }
 
-      .imagebox-waves {
+      .imagebox-snake {
         width: 90% !important;
         margin-bottom: 30px;
       }
