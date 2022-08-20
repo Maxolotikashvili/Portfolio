@@ -55,100 +55,222 @@ export class AppComponent implements OnInit {
   ballGmailMode: boolean = false;
 
   ngOnInit(): void {
+    
     // Gsap
     document.addEventListener('scroll', () => {
       let scrollTop = document.documentElement.scrollTop;
-      // console.log(scrollTop);
+      const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-      if (scrollTop >= 3351) {
-        if ((this.ballGithubMode, this.ballLinkedinMode, this.ballGithubMode)) {
-          return;
-        } else {
-          this.startBallsAnimation();
-          this.ballGithubMode = true;
-          this.ballLinkedinMode = true;
-          this.gmailMode = true;
+
+      // Resolution: 1366 X 760
+
+      if (windowWidth <= 1366 || 1600) {
+        if (scrollTop >= 2900) {
+          if ((this.ballGithubMode, this.ballLinkedinMode, this.ballGithubMode)) {
+            return;
+          } else {
+            this.startBallsAnimation();
+            this.ballGithubMode = true;
+            this.ballLinkedinMode = true;
+            this.gmailMode = true;
+          }
+        } else if (scrollTop < 2800) {
+          this.ballGithubMode = false;
+          this.ballLinkedinMode = false;
+          this.gmailMode = false;
         }
-      } else if (scrollTop < 3351) {
-        this.ballGithubMode = false;
-        this.ballLinkedinMode = false;
-        this.gmailMode = false;
       }
 
-      if (scrollTop >= 3246) {
-        if (this.touchMode) {
-          return;
-        } else {
-          this.startTouchAnimation();
-          this.touchMode = true;
+      if (windowWidth <= 1366 || 1600) {
+        if (scrollTop >= 2813) {
+          if (this.touchMode) {
+            return;
+          } else {
+            this.startTouchAnimation();
+            this.touchMode = true;
+          }
+        } else if (scrollTop < 2713) {
+          this.touchMode = false;
         }
-      } else if (scrollTop < 3246) {
-        this.touchMode = false;
       }
 
-      if (scrollTop >= 2924) {
-        if (this.h3Mode) {
-          return;
-        } else {
-          this.startH3Animation();
-          this.h3Mode = true;
+      if (windowWidth <= 1366 || 1600) {
+        if (scrollTop >= 2557) {
+          if (this.h3Mode) {
+            return;
+          } else {
+            this.startH3Animation();
+            this.h3Mode = true;
+          }
+        } else if (scrollTop < 2457) {
+          this.h3Mode = false;
         }
-      } else if (scrollTop < 2924) {
-        this.h3Mode = false;
       }
 
-      if (scrollTop >= 2356) {
-        if ((this.snakeImageMode, this.snakeTextBoxMode)) {
-          return;
-        } else {
-          this.startSnakeBoxAnimation();
-          this.snakeImageMode = true;
-          this.snakeTextBoxMode = true;
+      if (windowWidth <= 1366 || 1600) {
+        if (scrollTop >= 2030) {
+          if ((this.snakeImageMode, this.snakeTextBoxMode)) {
+            return;
+          } else {
+            this.startSnakeBoxAnimation();
+            this.snakeImageMode = true;
+            this.snakeTextBoxMode = true;
+          }
+        } else if (scrollTop < 1930) {
+          this.snakeImageMode = false;
+          this.snakeTextBoxMode = false;
         }
-      } else if (scrollTop < 2356) {
-        this.snakeImageMode = false;
-        this.snakeTextBoxMode = false;
       }
 
-      if (scrollTop >= 1705) {
-        if ((this.textBoxSliderMode, this.sliderImageMode)) {
-          return;
-        } else {
-          this.startSliderBoxAnimation();
-          this.textBoxSliderMode = true;
-          this.sliderImageMode = true;
+      if (windowWidth <= 1366 || 1600) {
+        if (scrollTop >= 1400) {
+          if ((this.textBoxSliderMode, this.sliderImageMode)) {
+            return;
+          } else {
+            this.startSliderBoxAnimation();
+            this.textBoxSliderMode = true;
+            this.sliderImageMode = true;
+          }
+        } else if (scrollTop < 1300) {
+          this.textBoxSliderMode = false;
+          this.sliderImageMode = false;
         }
-      } else if (scrollTop < 1705) {
-        this.textBoxSliderMode = false;
-        this.sliderImageMode = false;
       }
 
-      if (scrollTop >= 912) {
-        if ((this.projectImageMode, this.projectTextboxMode)) {
-          return;
-        } else {
-          this.startProjectBoxAnimation();
-          this.projectImageMode = true;
-          this.projectTextboxMode = true;
+      if (windowWidth <= 1366 || 1600) {
+        if (scrollTop >= 760) {
+          if ((this.projectImageMode, this.projectTextboxMode)) {
+            return;
+          } else {
+            this.startProjectBoxAnimation();
+            this.projectImageMode = true;
+            this.projectTextboxMode = true;
+          }
+        } else if (scrollTop < 660) {
+          this.projectImageMode = false;
+          this.projectTextboxMode = false;
         }
-      } else if (scrollTop < 912) {
-        this.projectImageMode = false;
-        this.projectTextboxMode = false;
       }
 
-      if (scrollTop >= 194) {
-        if ((this.smallboxMode, this.photoMode)) {
-          return;
-        } else {
-          this.startSmallBoxAnimation();
-          this.smallboxMode = true;
-          this.photoMode = true;
-        }
-      } else if (scrollTop < 193) {
-        this.smallboxMode = false;
-        this.photoMode = false;
+      if (windowWidth <= 1366 || 1600) {
+        if (scrollTop >= 138) {
+          if ((this.smallboxMode, this.photoMode)) {
+            return;
+          } else {
+            this.startSmallBoxAnimation();
+            this.smallboxMode = true;
+            this.photoMode = true;
+          }
+        } else if (scrollTop < 38) {
+          this.smallboxMode = false;
+          this.photoMode = false;
+        };
       };
-      
+
+      // Resolution: 1920 / 1080
+
+      if (windowWidth <= 1920) {
+        if (scrollTop >= 3351) {
+          if ((this.ballGithubMode, this.ballLinkedinMode, this.ballGithubMode)) {
+            return;
+          } else {
+            this.startBallsAnimation();
+            this.ballGithubMode = true;
+            this.ballLinkedinMode = true;
+            this.gmailMode = true;
+          }
+        } else if (scrollTop < 3251) {
+          this.ballGithubMode = false;
+          this.ballLinkedinMode = false;
+          this.gmailMode = false;
+        }
+      }
+      if (windowWidth <= 1920) {
+        if (scrollTop >= 3246) {
+          if (this.touchMode) {
+            return;
+          } else {
+            this.startTouchAnimation();
+            this.touchMode = true;
+          }
+        } else if (scrollTop < 3146) {
+          this.touchMode = false;
+        }
+      }
+
+      if (windowWidth <= 1920) {
+        if (scrollTop >= 2924) {
+          if (this.h3Mode) {
+            return;
+          } else {
+            this.startH3Animation();
+            this.h3Mode = true;
+          }
+        } else if (scrollTop < 2824) {
+          this.h3Mode = false;
+        }
+      }
+
+      if (windowWidth <= 1920) {
+        if (scrollTop >= 2356) {
+          if ((this.snakeImageMode, this.snakeTextBoxMode)) {
+            return;
+          } else {
+            this.startSnakeBoxAnimation();
+            this.snakeImageMode = true;
+            this.snakeTextBoxMode = true;
+          }
+        } else if (scrollTop < 2256) {
+          this.snakeImageMode = false;
+          this.snakeTextBoxMode = false;
+        }
+      }
+
+      if (windowWidth <= 1920) {
+        if (scrollTop >= 1705) {
+          if ((this.textBoxSliderMode, this.sliderImageMode)) {
+            return;
+          } else {
+            this.startSliderBoxAnimation();
+            this.textBoxSliderMode = true;
+            this.sliderImageMode = true;
+          }
+        } else if (scrollTop < 1605) {
+          this.textBoxSliderMode = false;
+          this.sliderImageMode = false;
+        }
+      }
+
+      if (windowWidth <= 1920) {
+        if (scrollTop >= 912) {
+          if ((this.projectImageMode, this.projectTextboxMode)) {
+            return;
+          } else {
+            this.startProjectBoxAnimation();
+            this.projectImageMode = true;
+            this.projectTextboxMode = true;
+          }
+        } else if (scrollTop < 812) {
+          this.projectImageMode = false;
+          this.projectTextboxMode = false;
+        }
+      }
+
+      if (windowWidth <= 1920) {
+        if (scrollTop >= 194) {
+          if ((this.smallboxMode, this.photoMode)) {
+            return;
+          } else {
+            this.startSmallBoxAnimation();
+            this.smallboxMode = true;
+            this.photoMode = true;
+          }
+        } else if (scrollTop < 94) {
+          this.smallboxMode = false;
+          this.photoMode = false;
+        };
+      };
+
     });
   }
 
