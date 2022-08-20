@@ -64,7 +64,7 @@ export class AppComponent implements OnInit {
 
       // Resolution: 1366 X 760
 
-      if (windowWidth <= 1366 || 1600) {
+      if (windowWidth <= 1366) {
         if (scrollTop >= 2900) {
           if ((this.ballGithubMode, this.ballLinkedinMode, this.ballGithubMode)) {
             return;
@@ -81,7 +81,7 @@ export class AppComponent implements OnInit {
         }
       }
 
-      if (windowWidth <= 1366 || 1600) {
+      if (windowWidth <= 1366) {
         if (scrollTop >= 2813) {
           if (this.touchMode) {
             return;
@@ -94,7 +94,7 @@ export class AppComponent implements OnInit {
         }
       }
 
-      if (windowWidth <= 1366 || 1600) {
+      if (windowWidth <= 1366) {
         if (scrollTop >= 2557) {
           if (this.h3Mode) {
             return;
@@ -107,7 +107,7 @@ export class AppComponent implements OnInit {
         }
       }
 
-      if (windowWidth <= 1366 || 1600) {
+      if (windowWidth <= 1366) {
         if (scrollTop >= 2030) {
           if ((this.snakeImageMode, this.snakeTextBoxMode)) {
             return;
@@ -122,7 +122,7 @@ export class AppComponent implements OnInit {
         }
       }
 
-      if (windowWidth <= 1366 || 1600) {
+      if (windowWidth <= 1366) {
         if (scrollTop >= 1400) {
           if ((this.textBoxSliderMode, this.sliderImageMode)) {
             return;
@@ -137,7 +137,7 @@ export class AppComponent implements OnInit {
         }
       }
 
-      if (windowWidth <= 1366 || 1600) {
+      if (windowWidth <= 1366) {
         if (scrollTop >= 760) {
           if ((this.projectImageMode, this.projectTextboxMode)) {
             return;
@@ -152,7 +152,7 @@ export class AppComponent implements OnInit {
         }
       }
 
-      if (windowWidth <= 1366 || 1600) {
+      if (windowWidth <= 1366) {
         if (scrollTop >= 138) {
           if ((this.smallboxMode, this.photoMode)) {
             return;
