@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
     document.addEventListener('scroll', () => {
       let scrollTop = document.documentElement.scrollTop;
       const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
+      console.log(scrollTop)
 
       // Resolution: 1366 X 760
 
