@@ -60,7 +60,6 @@ export class AppComponent implements OnInit {
     document.addEventListener('scroll', () => {
       let scrollTop = document.documentElement.scrollTop;
       const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      console.log(scrollTop)
 
       // Resolution: 1366 X 760
 
@@ -169,10 +168,8 @@ export class AppComponent implements OnInit {
 
       // Resolution: 1920 / 1080
 
-
-      // Contact Balls
       if (windowWidth <= 1920) {
-        if (scrollTop >= 4356) {
+        if (scrollTop >= 3351) {
           if ((this.ballGithubMode, this.ballLinkedinMode, this.ballGithubMode)) {
             return;
           } else {
@@ -181,44 +178,40 @@ export class AppComponent implements OnInit {
             this.ballLinkedinMode = true;
             this.gmailMode = true;
           }
-        } else if (scrollTop < 4256) {
+        } else if (scrollTop < 3251) {
           this.ballGithubMode = false;
           this.ballLinkedinMode = false;
           this.gmailMode = false;
         }
       }
-
-      // Get In Touch
       if (windowWidth <= 1920) {
-        if (scrollTop >= 4251) {
+        if (scrollTop >= 3246) {
           if (this.touchMode) {
             return;
           } else {
             this.startTouchAnimation();
             this.touchMode = true;
           }
-        } else if (scrollTop < 4151) {
+        } else if (scrollTop < 3146) {
           this.touchMode = false;
         }
       }
 
-      // See More Projects
       if (windowWidth <= 1920) {
-        if (scrollTop >= 3833) {
+        if (scrollTop >= 2924) {
           if (this.h3Mode) {
             return;
           } else {
             this.startH3Animation();
             this.h3Mode = true;
           }
-        } else if (scrollTop < 3733) {
+        } else if (scrollTop < 2824) {
           this.h3Mode = false;
         }
       }
 
-      // Snake
       if (windowWidth <= 1920) {
-        if (scrollTop >= 3169) {
+        if (scrollTop >= 2356) {
           if ((this.snakeImageMode, this.snakeTextBoxMode)) {
             return;
           } else {
@@ -226,15 +219,14 @@ export class AppComponent implements OnInit {
             this.snakeImageMode = true;
             this.snakeTextBoxMode = true;
           }
-        } else if (scrollTop < 3069) {
+        } else if (scrollTop < 2256) {
           this.snakeImageMode = false;
           this.snakeTextBoxMode = false;
         }
       }
 
-      // Slider
       if (windowWidth <= 1920) {
-        if (scrollTop >= 2273) {
+        if (scrollTop >= 1705) {
           if ((this.textBoxSliderMode, this.sliderImageMode)) {
             return;
           } else {
@@ -242,15 +234,14 @@ export class AppComponent implements OnInit {
             this.textBoxSliderMode = true;
             this.sliderImageMode = true;
           }
-        } else if (scrollTop < 2175) {
+        } else if (scrollTop < 1605) {
           this.textBoxSliderMode = false;
           this.sliderImageMode = false;
         }
       }
 
-      // CyberHub
       if (windowWidth <= 1920) {
-        if (scrollTop >= 1245) {
+        if (scrollTop >= 912) {
           if ((this.projectImageMode, this.projectTextboxMode)) {
             return;
           } else {
@@ -258,15 +249,14 @@ export class AppComponent implements OnInit {
             this.projectImageMode = true;
             this.projectTextboxMode = true;
           }
-        } else if (scrollTop < 1145) {
+        } else if (scrollTop < 812) {
           this.projectImageMode = false;
           this.projectTextboxMode = false;
         }
       }
 
-      // About Me
       if (windowWidth <= 1920) {
-        if (scrollTop >= 313) {
+        if (scrollTop >= 194) {
           if ((this.smallboxMode, this.photoMode)) {
             return;
           } else {
@@ -274,7 +264,7 @@ export class AppComponent implements OnInit {
             this.smallboxMode = true;
             this.photoMode = true;
           }
-        } else if (scrollTop < 310) {
+        } else if (scrollTop < 94) {
           this.smallboxMode = false;
           this.photoMode = false;
         };
@@ -363,13 +353,13 @@ export class AppComponent implements OnInit {
   startSmallBoxAnimation() {
     gsap.from(document.querySelector('.smallbox-about'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
     });
 
     gsap.from(document.querySelector('.smallbox-image'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
       delay: 0.1,
     });
@@ -378,19 +368,19 @@ export class AppComponent implements OnInit {
   startProjectBoxAnimation() {
     gsap.from(document.querySelector('.workedon-box'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
     });
 
     gsap.from(document.querySelector('.project-imagebox'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
     });
 
     gsap.from(document.querySelector('.project-textbox'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
       delay: 0.1,
     });
@@ -399,13 +389,13 @@ export class AppComponent implements OnInit {
   startSliderBoxAnimation() {
     gsap.from(document.querySelector('.textbox-slider'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
     });
 
     gsap.from(document.querySelector('.imagebox-slider'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
       delay: 0.1,
     });
@@ -414,13 +404,13 @@ export class AppComponent implements OnInit {
   startSnakeBoxAnimation() {
     gsap.from(document.querySelector('.imagebox-snake'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
     });
 
     gsap.from(document.querySelector('.textbox-snake'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
       delay: 0.1,
     });
@@ -429,7 +419,7 @@ export class AppComponent implements OnInit {
   startH3Animation() {
     gsap.from(document.querySelector('.more'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 500,
     });
   }
@@ -437,7 +427,7 @@ export class AppComponent implements OnInit {
   startTouchAnimation() {
     gsap.from(document.querySelector('.touch'), {
       ease: 'expo',
-      duration: 1.2,
+      duration: 1,
       y: 100,
     });
   }
@@ -445,20 +435,20 @@ export class AppComponent implements OnInit {
   startBallsAnimation() {
     gsap.from(document.querySelector('.ball-github'), {
       ease: 'bounce',
-      duration: 1.7,
-      x: -80,
+      duration: 1.5,
+      x: -70,
     });
 
     gsap.from(document.querySelector('.ball-linkedin'), {
       ease: 'bounce',
-      duration: 1.7,
+      duration: 1.5,
       y: -70
     });
 
     gsap.from(document.querySelector('.ball-gmail'), {
       ease: 'bounce',
-      duration: 1.7,
-      x: 80
+      duration: 1.5,
+      x: 70
     });
   };
 };
